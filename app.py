@@ -228,8 +228,9 @@ error_messages = {'$DELETE_PUNCT': 'Deleted incorrectly placed punctuation.',
 
 @st.cache(suppress_st_warning=True, allow_output_mutation=True, show_spinner=True)
 def load_ner_model():
-    tokenizer = AutoTokenizer.from_pretrained("elastic/distilbert-base-uncased-finetuned-conll03-english")
-    model = AutoModelForTokenClassification.from_pretrained("elastic/distilbert-base-uncased-finetuned-conll03-english")
+    model_name = 'xlm-roberta-large-finetuned-conll03-english
+    tokenizer = AutoTokenizer.from_pretrained(model_name)
+    model = AutoModelForTokenClassification.from_pretrained(model_name)
     nlp_pipe = pipeline(task='ner', model=model, tokenizer=tokenizer, framework='pt')
     return nlp_pipe
 
