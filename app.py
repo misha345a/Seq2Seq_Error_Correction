@@ -224,7 +224,7 @@ error_messages = {'$DELETE_PUNCT': 'Deleted incorrectly placed punctuation.',
 
 #####################################
 
-@st.cache(suppress_st_warning=True, allow_output_mutation=True, show_spinner=True)
+# st.cache(suppress_st_warning=True, allow_output_mutation=True, show_spinner=True)
 def load_ner_model():
     """
     Download the pytorch model from transformers.
