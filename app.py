@@ -270,7 +270,7 @@ prototype seeks to detect and correct common mistakes:")
 
 image = Image.open('./images/example.PNG')
 st.image(image,
-         caption='Image sourced from https://courses.lumenlearning.com/engcomp1-wmopen/chapter/text-mla-in-text-citations/',
+         caption='Image sourced from lumenlearning.com',
          output_format='PNG')
 
 st.subheader("Under the Hood")
