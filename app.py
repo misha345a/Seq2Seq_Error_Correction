@@ -224,7 +224,7 @@ error_messages = {'$DELETE_PUNCT': 'Deleted incorrectly placed punctuation.',
 
 #####################################
 
-# from transformers import AutoTokenizer, AutoModelForTokenClassification
+from transformers import AutoTokenizer, AutoModelForTokenClassification
 # tokenizer = AutoTokenizer.from_pretrained("elastic/distilbert-base-uncased-finetuned-conll03-english")
 # model = AutoModelForTokenClassification.from_pretrained("elastic/distilbert-base-uncased-finetuned-conll03-english")
 
