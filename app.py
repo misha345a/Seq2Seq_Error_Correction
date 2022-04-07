@@ -9,7 +9,6 @@ import pickle
 from PIL import Image
 import pandas as pd
 import numpy as np
-import tensorflow
 from tensorflow import keras
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 from transformers.pipelines import pipeline
