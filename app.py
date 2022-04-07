@@ -289,7 +289,7 @@ examples = ['Parents play an important role in helping children learn techniques
             'Global warning is the biggest threat to our planet (Brown 40 Smith 50)',
             'Green imagines a "new type of oligarchy." (232).',
             'This novel recently drew critical attention (Talbot and Martin 22).',
-            'Livestock farming is one of the biggest global contributors to climate change. (Paul 64; Jackson 14).',
+            'Livestock farming is one of the biggest global contributors to climate change. (Raul 64; Douglas 14).',
             'As a painter, Andrea was a romantic (Margaret Flint 98).']
 
 with st.form(key='my_form'):
