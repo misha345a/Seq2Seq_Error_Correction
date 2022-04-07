@@ -12,7 +12,9 @@ import numpy as np
 from tensorflow import keras
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 from transformers.pipelines import pipeline
+from transformers import AutoTokenizer, AutoModelForTokenClassification
 from nltk.tokenize import TweetTokenizer
+import torch
 
 #####################################
 
@@ -224,12 +226,7 @@ error_messages = {'$DELETE_PUNCT': 'Deleted incorrectly placed punctuation.',
 
 #####################################
 
-import torch
-from transformers import AutoTokenizer, AutoModelForTokenClassification
-# tokenizer = AutoTokenizer.from_pretrained("elastic/distilbert-base-uncased-finetuned-conll03-english")
-# model = AutoModelForTokenClassification.from_pretrained("elastic/distilbert-base-uncased-finetuned-conll03-english")
-
-st.cache(show_spinner=True)
+@st.cache(suppress_st_warning=True, allow_output_mutation=True, show_spinner=True)
 def load_ner_model():
     tokenizer = AutoTokenizer.from_pretrained("elastic/distilbert-base-uncased-finetuned-conll03-english")
     model = AutoModelForTokenClassification.from_pretrained("elastic/distilbert-base-uncased-finetuned-conll03-english")
