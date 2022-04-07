@@ -224,14 +224,25 @@ error_messages = {'$DELETE_PUNCT': 'Deleted incorrectly placed punctuation.',
 
 #####################################
 
-# st.cache(suppress_st_warning=True, allow_output_mutation=True, show_spinner=True)
+# from transformers import AutoTokenizer, AutoModelForTokenClassification
+# tokenizer = AutoTokenizer.from_pretrained("elastic/distilbert-base-uncased-finetuned-conll03-english")
+# model = AutoModelForTokenClassification.from_pretrained("elastic/distilbert-base-uncased-finetuned-conll03-english")
+
+st.cache(show_spinner=True)
 def load_ner_model():
-    """
-    Download the pytorch model from transformers.
-    """
-    model_name = "dslim/bert-base-NER"
-    classifier = pipeline(model=model_name, tokenizer=model_name, task='ner', framework='pt')
-    return classifier
+    tokenizer = AutoTokenizer.from_pretrained("elastic/distilbert-base-uncased-finetuned-conll03-english")
+    model = AutoModelForTokenClassification.from_pretrained("elastic/distilbert-base-uncased-finetuned-conll03-english")
+    nlp_pipe = pipeline(task='ner', model=model, tokenizer=tokenizer, framework='pt')
+    return nlp_pipe
+
+# st.cache(suppress_st_warning=True, allow_output_mutation=True, show_spinner=True)
+# def load_ner_model():
+#     """
+#     Download the pytorch model from transformers.
+#     """
+#     model_name = "dslim/bert-base-NER"
+#     classifier = pipeline(model=model_name, tokenizer=model_name, task='ner', framework='pt')
+#     return classifier
 
 @st.cache(suppress_st_warning=True, allow_output_mutation=True, show_spinner=True)
 def load_seq2seq_model():
