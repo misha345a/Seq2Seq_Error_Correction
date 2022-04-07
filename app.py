@@ -1,12 +1,7 @@
 
+
 import streamlit as st
 import sys
-# import pandas as pd
-# import numpy as np
-# from tensorflow import keras
-# from keras.preprocessing.sequence import pad_sequences
-# from transformers.pipelines import pipeline
-# from nltk.tokenize import TweetTokenizer
 import nltk
 nltk.download('punkt')
 import string
@@ -14,19 +9,12 @@ import re
 import random
 import pickle
 from PIL import Image
-
-@st.cache(suppress_st_warning=True, allow_output_mutation=True, show_spinner=True)
-def load_libraries():
-    import pandas as pd
-    import numpy as np
-    from tensorflow import keras
-    from keras.preprocessing.sequence import pad_sequences
-    from transformers.pipelines import pipeline
-    from nltk.tokenize import TweetTokenizer
-    return pd, np, keras, pad_sequences, pipeline, TweetTokenizer
-
-with st.spinner("Please be patient. Loading libraries..."):
-    pd, np, keras, pad_sequences, pipeline, TweetTokenizer = load_libraries()
+import pandas as pd
+import numpy as np
+from tensorflow import keras
+from keras.preprocessing.sequence import pad_sequences
+from transformers.pipelines import pipeline
+from nltk.tokenize import TweetTokenizer
 
 sys.path.append("C:\\Users\\admin\\Documents\\MEDIUM\\Grammarly\\app")
 
