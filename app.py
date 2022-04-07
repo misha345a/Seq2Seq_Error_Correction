@@ -14,8 +14,6 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 from transformers.pipelines import pipeline
 from nltk.tokenize import TweetTokenizer
 
-sys.path.append("C:\\Users\\admin\\Documents\\MEDIUM\\Grammarly\\app")
-
 #####################################
 
 def encode_sequences(tokenizer, length, lines):
