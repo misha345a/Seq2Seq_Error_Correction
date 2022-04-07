@@ -234,15 +234,6 @@ def load_ner_model():
     nlp_pipe = pipeline(task='ner', model=model, tokenizer=tokenizer, framework='pt')
     return nlp_pipe
 
-# st.cache(suppress_st_warning=True, allow_output_mutation=True, show_spinner=True)
-# def load_ner_model():
-#     """
-#     Download the pytorch model from transformers.
-#     """
-#     model_name = "dslim/bert-base-NER"
-#     classifier = pipeline(model=model_name, tokenizer=model_name, task='ner', framework='pt')
-#     return classifier
-
 @st.cache(suppress_st_warning=True, allow_output_mutation=True, show_spinner=True)
 def load_seq2seq_model():
     return keras.models.load_model('./model')
@@ -276,12 +267,14 @@ st.image(image,
 
 st.subheader("Under the Hood")
 st.markdown("Training data was created using pattern-based error generation \
-to replicate common errors (3 million+ observations). \n A Seq2Seq LSTM model in Keras was trained to translate faulty observations into correct ones.")
+to replicate common errors (3 million+ observations).\n \
+A Seq2Seq LSTM model in Keras was trained to translate faulty observations into correct ones.\n \
+A pretrained BERT NER model is leveraged during pre and post-processing steps to identify names.")
 
-st.subheader("Future Directions")
-st.markdown("1. Improve model robustness by training on a greater range of errors.\n \
-2. Error detection for other writing formats - APA, Chicago, etc.\n\n \
-This demo is is far from perfect, and you will surely see a great many mistakes. But it's a start!")
+# st.subheader("Future Directions")
+# st.markdown("1. Improve model robustness by training on a greater range of errors.\n \
+# 2. Error detection for other writing formats - APA, Chicago, etc.\n\n \
+# This demo is is far from perfect, and you will surely see a great many mistakes. But it's a start!")
 
 examples = ['Parents play an important role in helping children learn techniques for coping with bullying. (Lang).',
             'One study found that the most important element in comprehending non-native speech is familiarity with the topic (Lee and Martin, 163).',
@@ -290,7 +283,7 @@ examples = ['Parents play an important role in helping children learn techniques
             'The authors claim that surface reading looks at what is "evident, perceptible, apprehensible in texts" (Best and Marcus, 9).',
             'As indicated by Williams, it is c extensively explored the role of emotion in the creative process (Williams 263).',
             'Smith demonstrates this psychological phenomenon in his work (Smith 22).',
-            'Thus, the main character exemplified "aspects of posthumanism" (Alex Shelby 31).'
+            'Thus, the main character exemplified "aspects of posthumanism" (Alex Shelby 31).',
             'There are ways to document this "overwhelming need for self-study." (Jones et al. 18).',
             'In response, Mary replied to the politician with disgust! (Blackwell 43).',
             'Global warning is the biggest threat to our planet (Brown 40 Smith 50)',
