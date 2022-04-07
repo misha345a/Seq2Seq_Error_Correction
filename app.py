@@ -229,7 +229,7 @@ def load_ner_model():
     """
     Download the pytorch model from transformers.
     """
-    model_name = "elastic/distilbert-base-uncased-finetuned-conll03-english"
+    model_name = "dslim/bert-base-NER"
     classifier = pipeline(model=model_name, tokenizer=model_name, task='ner', framework='pt')
     return classifier
 
