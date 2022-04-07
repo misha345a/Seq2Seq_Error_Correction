@@ -1,5 +1,3 @@
-
-
 import streamlit as st
 import sys
 import nltk
@@ -12,7 +10,7 @@ from PIL import Image
 import pandas as pd
 import numpy as np
 from tensorflow import keras
-from keras.preprocessing.sequence import pad_sequences
+from tensorflow.keras.preprocessing.sequence import pad_sequences
 from transformers.pipelines import pipeline
 from nltk.tokenize import TweetTokenizer
 
