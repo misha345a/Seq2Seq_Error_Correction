@@ -266,10 +266,9 @@ st.image(image,
          output_format='PNG')
 
 st.subheader("Under the Hood")
-st.markdown("Training data was created using pattern-based error generation \
-to replicate common errors (3 million+ observations).\n \
-A Seq2Seq LSTM model in Keras was trained to translate faulty observations into correct ones.\n \
-A pretrained BERT NER model is leveraged during pre and post-processing steps to identify names.")
+st.markdown("Training data was created using pattern-based error generation (3 million observations).\n \
+Machine translation from erroneous to correct observations was built using a Sequence-to-Sequence (Seq2Seq) model with Keras. \n \
+A pretrained BERT NER model is leveraged during text pre-processing steps to identify names.")
 
 # st.subheader("Future Directions")
 # st.markdown("1. Improve model robustness by training on a greater range of errors.\n \
