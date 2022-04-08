@@ -252,11 +252,11 @@ with st.spinner("Please be patient. Loading models..."):
     model = load_seq2seq_model()
     incorrect_tokenizer, correct_tokenizer = load_tokenizers()
 
-st.title("Demo: Correction of MLA In-Text Citations")
+st.title("Demo: Neural Error Correction for MLA In-Text Citations")
 
 st.subheader("Motivation")
 st.markdown("Existing services, such as Easybib, CitationMachine, Scribbr, \
-help create in-text citations, but many students still struggle to \
+help create MLA in-text citations, but many students still struggle to \
 correctly incorporate them within their works. \n This AI-powered \
 prototype seeks to detect and correct common mistakes:")
 
