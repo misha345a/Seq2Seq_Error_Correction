@@ -262,8 +262,8 @@ on specific formats like MLA. This AI-powered prototype aims \
 to help fill the gap by detecting and correcting common mistakes \
 with MLA in-text citations - such as the ones illustrated below.")
 
-image = Image.open('./images/example.PNG')
-st.image(image,
+image_example = Image.open('./images/example.PNG')
+st.image(image_example,
          caption='Image sourced from lumenlearning.com',
          output_format='PNG')
 
@@ -271,6 +271,10 @@ st.subheader("Under the Hood")
 st.markdown("Training data was created using pattern-based error generation (3 million observations).\n \
 Machine translation from erroneous to correct observations was built using Sequence-to-Sequence (Seq2Seq) modeling with Keras. \n \
 A pre-trained BERT NER model is leveraged during text pre-processing steps to identify names.")
+
+image_process = Image.open('./images/process.PNG')
+st.image(image_process,
+         output_format='PNG')
 
 # st.subheader("Future Directions")
 # st.markdown("1. Improve model robustness by training on a greater range of errors.\n \
