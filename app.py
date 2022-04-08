@@ -255,10 +255,12 @@ with st.spinner("Please be patient. Loading models..."):
 st.title("Demo: Neural Error Correction for MLA In-Text Citations")
 
 st.subheader("Motivation")
-st.markdown("Existing services, such as Easybib, CitationMachine, Scribbr, \
-help create MLA in-text citations, but many students still struggle to \
-correctly incorporate them within their works. \n This AI-powered \
-prototype seeks to detect and correct common mistakes:")
+st.markdown("While using in-text citations is an integral part of the writing process, \
+it is oftentimes a head-scratcher for many students. \
+Currently, popular AI writing assistants do not make recommendations \
+on specific formats like MLA. This AI-powered prototype aims \
+to help fill the gap by detecting and correcting common mistakes \
+with MLA in-text citations - such as the ones illustrated below.")
 
 image = Image.open('./images/example.PNG')
 st.image(image,
@@ -267,8 +269,8 @@ st.image(image,
 
 st.subheader("Under the Hood")
 st.markdown("Training data was created using pattern-based error generation (3 million observations).\n \
-Machine translation from erroneous to correct observations was built using a Sequence-to-Sequence (Seq2Seq) model with Keras. \n \
-A pretrained BERT NER model is leveraged during text pre-processing steps to identify names.")
+Machine translation from erroneous to correct observations was built using Sequence-to-Sequence (Seq2Seq) modeling with Keras. \n \
+A pre-trained BERT NER model is leveraged during text pre-processing steps to identify names.")
 
 # st.subheader("Future Directions")
 # st.markdown("1. Improve model robustness by training on a greater range of errors.\n \
