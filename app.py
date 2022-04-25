@@ -150,6 +150,7 @@ def get_word(n, tokenizer):
 
 def output_pred(prediction_sequence):
   """
+  Restructure the output prediction into text.
   """
   preds_text = []
   for i in prediction_sequence:
@@ -179,7 +180,7 @@ def prediction(text):
 
 def post_processing(text, sequence, map, org):
   """
-
+  Modify the text according to tagged errors.
   """
   df_post_processing = pd.DataFrame(zip(sequence.split(), map[::-1], org[::-1]),
                                     columns=['Pred', 'Map', 'Org'])
