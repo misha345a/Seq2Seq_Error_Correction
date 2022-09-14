@@ -253,7 +253,7 @@ with st.spinner("Please be patient. Loading models..."):
 st.title("Demo: Neural Error Correction for MLA In-Text Citations")
 
 st.subheader("Motivation")
-st.markdown("While using in-text citations is an integral part of the writing process, \
+st.markdown("Although using in-text citations is an integral part of the academic writing process, \
 it is oftentimes a head-scratcher for many students. \
 Currently, popular AI writing assistants do not make recommendations \
 on specific formats like MLA. This AI-powered prototype aims \
@@ -268,7 +268,7 @@ st.image(image_example,
 st.subheader("Under the Hood")
 st.markdown("Training data was created using pattern-based error generation (3 million observations).\n \
 Machine translation from erroneous to correct observations was built using Sequence-to-Sequence (Seq2Seq) modeling with Keras. \n \
-A pre-trained BERT NER model is leveraged during text pre-processing steps to identify names.")
+A pre-trained BERT NER model is leveraged during text pre-processing steps to identify author names.")
 
 image_process = Image.open('./images/process.PNG')
 st.image(image_process,
