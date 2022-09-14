@@ -140,9 +140,6 @@ def custom_tokenization(text):
   return clipped_output, map_hash, org_hash
 
 def get_word(n, tokenizer):
-  """
-
-  """
   for word, index in tokenizer.word_index.items():
     if index == n:
       return word
@@ -280,7 +277,6 @@ st.image(image_process,
 # st.subheader("Future Directions")
 # st.markdown("1. Improve model robustness by training on a greater range of errors.\n \
 # 2. Error detection for other writing formats - APA, Chicago, etc.\n\n \
-# This demo is is far from perfect, and you will surely see a great many mistakes. But it's a start!")
 
 examples = ['Parents play an important role in helping children learn techniques for coping with bullying. (Lang).',
             'One study found that the most important element in comprehending non-native speech is familiarity with the topic (Lee and Martin, 163).',
