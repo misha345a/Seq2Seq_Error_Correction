@@ -14,4 +14,6 @@ A pre-trained BERT NER model is leveraged during text pre-processing steps to id
 ![image](https://user-images.githubusercontent.com/84154105/190181079-ffd01095-9831-42c2-b96e-42405d10f90c.png)
 
 ## Demo
-Click <a href="https://misha345a-seq2seq-error-correction-app-5ew83v.streamlitapp.com/" target="_blank">here</a> to try out the web app demo.
+### Click <a href="https://misha345a-seq2seq-error-correction-app-5ew83v.streamlitapp.com/" target="_blank">here</a> to try out the web app demo.
+
+![image](https://user-images.githubusercontent.com/84154105/190185043-8796c474-7e02-4f7f-b46d-4db43444c484.png)
