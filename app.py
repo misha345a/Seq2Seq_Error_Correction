@@ -251,6 +251,7 @@ with st.spinner("Please be patient. Loading models..."):
     incorrect_tokenizer, correct_tokenizer = load_tokenizers()
 
 st.title("Demo: Neural Error Correction for MLA In-Text Citations")
+st.markdown("The project code can be found on my GitHub here: https://github.com/misha345a/Seq2Seq_Error_Correction")
 
 st.subheader("Motivation")
 st.markdown("Although using in-text citations is an integral part of the academic writing process, \
